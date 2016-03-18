@@ -1,0 +1,34 @@
+extends base
+block content
+
+	h1 #{currentColor} Flowers
+	
+	h2 Explore Flowers
+
+	form(action='showColors', methods='get')
+		select(name='colorDropDown')
+			each color in flowercolors
+				option(value='#{color}') #{color}
+		input(type='submit' name='colorButton' value='Choose color')
+
+	ul
+		each flower in flowers
+			li
+				a(href='/details/#{flower.name}') #{flower.name}
+				
+	p
+	p
+	hr
+				
+	h2 Add Flowers
+
+	form(action='addNewFlower', method='post')
+		p Name
+			input#newFlowerName(name='name' type='text' placeholder='name')
+		p Color
+			input#newFlowerColor(name='color' type='text' placeholder='color')
+		p Image
+			input#newFlowerImage(name='image' type='text' placeholder='image file name')
+		p Wikipedia Page
+			input#newFlowerLink(name='wiki' type='text' placeholder='wikipedia link')
+		button#saveNewFlower Save

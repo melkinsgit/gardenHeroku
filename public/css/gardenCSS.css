@@ -1,0 +1,25 @@
+body {
+    background-color: #7fffd4;
+    font-size: 14pt;
+}
+
+p, ul, form, input, h1, h2, a {
+    padding: 4px;
+    margin: 5px;
+}
+
+h1 {
+    color: #ff8c00;
+}
+
+h2 {
+	color: #800080;
+}
+
+li {
+    margin-left: 80px;
+}
+
+select, input {
+	font-size: 14pt;
+}

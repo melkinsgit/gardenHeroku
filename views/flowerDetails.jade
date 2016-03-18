@@ -1,0 +1,15 @@
+extends base
+block content
+
+	h1 #{name}
+
+	if image
+		img(src='/images/#{image}')
+	else
+		p: i Sorry, there is no image for #{name)
+
+	p #{name} is #{color}
+
+	p Visit this flower's Wikipedia page at the following link,
+
+	a(href='#{wiki}') #{wiki}
